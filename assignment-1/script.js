@@ -15,7 +15,7 @@ else {
 // Use the below rolling dice generator to create a random number between 1 and 6. Then write a condition to check that number and do something for each check eg. return the value back to console using console.log(...). Consider using the switch operator for it.
 
 let rolled = Math.ceil(Math.random() * 6);
-console.log(rolled)
+console.log(rolled);
 
 switch (rolled) {
     case (1):
@@ -38,9 +38,9 @@ switch (rolled) {
 // Use the same random dice generator as above to generate a number between 1 and 6. Now create a loop that keep rolling until the number generated is more than 3. As soon as you get a number more than three, the loop should end. Output how many times the loop ran before it reached this number. Be careful with this - if you create a loop that has no way to end (due to a faulty check), it will easily crash your browser!
 
 
-let count = 1
+let count = 0;
 while (rolled < 3) {
-    count++
+    count++;
     rolled++;
 }
 
