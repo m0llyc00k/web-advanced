@@ -102,10 +102,15 @@ let my_string_2 = my_string;
 
 //json 
 
-const json_person = {
-    "firstName": "John",
-    "lastName": "Parsons"
-};
+const questions = 
+    {
+        "What is 2 + 2?": "4",
+        "What color is the sky?": "blue",
+        "What animal barks?": "dogs",
+        "What is the meaning of life?": "Nodody knows"
+        
+    }
+    
 
 
 // console.log(JSON.stringify(json_person));
@@ -129,8 +134,7 @@ const car2 = new Car('Mazda', 'Miata', 1990);
 
 // if you want to use a template again and again you should use this
 class Person {
-    constructor(firstName = "", lastName = "") 
-    {
+    constructor(firstName = "", lastName = "") {
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -159,9 +163,9 @@ const person2 = new Person('Lucy', 'Lu');
 
 function rollDice(sides) {
     this.side = sides
-    this.roll = function () {
-        return ( Math.floor( Math.random() * this.sides + 1) )
-}
+    this.roll = function() {
+        return (Math.floor(Math.random() * this.sides + 1))
+    }
 }
 
 

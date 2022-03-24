@@ -69,7 +69,8 @@ const button = document.createElement('button');
 button.textContent = 'Click to change the image!';
 //add event listener to change the image on click
 button.addEventListener('click', function() {
-    newImage.src = 'https://source.unsplash.com/random';
+    newImage.src = ['https://picsum.photos/200/300?random=1'];
+    alert('hey')
 });
 // insert the button in the section tag
 sect.insertBefore(button, title);

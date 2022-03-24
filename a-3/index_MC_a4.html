@@ -15,24 +15,37 @@
 
   <header>Molly Assignment 4</header>
 
-  <p id="typeAnswer"></p>
-  <p id="nameAnswer"></p>
-  <p id="ageAnswer"></p>
-  <p id="colorAnswer"></p>
-  <p id="toyAnswer"></p>
-
-
   <script>
-    const myPet = '{"What is your pet\'s name?": "Spot", "What type of pet do you have?": "dog", "What is your pet\'s age?": 12, "What is your pet\'s color?": "brown and white", "What\'s your pet\'s favorite toy?": "bone" }';
+    const questions = {
+      "What is 2 + 2?": "4",
+      "What color is the sky?": "blue",
+      "What animal barks?": "dogs",
+      "What is the meaning of life?": "peanut butter"
 
-    const myObj = JSON.parse(myPet);
+    }
 
-    document.getElementById("typeAnswer").innerHTML = "My pet is a " + myObj["What type of pet do you have?"];
-    document.getElementById("nameAnswer").innerHTML = "My pet\'s name is " + myObj["What is your pet\'s name?"];
-    document.getElementById("ageAnswer").innerHTML = "My pet is " + myObj["What is your pet\'s age?"] + " years old."
-    document.getElementById("colorAnswer").innerHTML = "My pet is " + myObj["What is your pet\'s color?"];
-    document.getElementById("toyAnswer").innerHTML = myObj["What is your pet\'s name?"] + " loves his " + myObj["What\'s your pet\'s favorite toy?"] + "!";
-    
+
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Answer Question";
+    btn.onclick = function myFunction() {
+      for (const property in questions) {
+        let answer = prompt(`${property}`);
+
+        let thisAnswer = document.createElement("p")
+
+        if (answer == questions[property]) {
+          thisAnswer.innerHTML = "Yes, " + answer + " is the right answer";
+        }
+        else {
+
+          thisAnswer.innerHTML = "Nope, \'" + answer + "\' is the wrong answer";
+        }
+        document.body.appendChild(thisAnswer)
+      }
+    }
+
+    document.body.appendChild(btn);
   </script>
 </body>
 
