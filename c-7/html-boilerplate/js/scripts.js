@@ -167,3 +167,14 @@ function printString(string, callback){
 // }
 
 // printAll()
+
+
+
+try {
+  console.log("This code")
+  const xx = x + 2;
+} catch (exception){
+  console.log(exception);
+  console.log("The error is" + exception.message);
+}
+console.log("moving on")
