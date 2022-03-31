@@ -16,7 +16,7 @@ body {
     background: #f8f9fa;
 }
 
-.title {
+#title {
     position: relative;
     width: 600px;
     margin-top: .3em;
@@ -25,9 +25,11 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    display: flex;
     align-items: center;
+    font-family: 'Inter', sans-serif;
     font-feature-settings: 'tnum'1;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .grid-line {
@@ -62,8 +64,7 @@ body {
 
 .cloud-dot {
     fill: #c8d6e5;
-    /*opacity: 0.8;*/
-    mix-blend-mode: multiply;
+    opacity: 1;
 }
 
 .humidity-dot {
@@ -79,7 +80,7 @@ body {
 
 .snow-dot {
     opacity: 0.7;
-    fill: #636e72;
+    fill: #b2bec3;
     mix-blend-mode: multiply;
 }
 
@@ -98,10 +99,60 @@ svg {
     overflow: visible;
 }
 
-.wrapper {
+#wrapper {
     position: relative;
 }
 
+.dropbtn {
+    background-color: #8395a7;
+    font-family: 'Inter', sans-serif;
+    color: #dfdfdf;
+    padding: 14px;
+    font-size: 13px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #dfdfdf;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: #34495e;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.dropdown-content a {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: cornflowerblue;
+    opacity: .5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    opacity: .5;
+}
 
 .tooltip {
     opacity: 0;
@@ -117,6 +168,7 @@ svg {
     border: 1px solid #ddd;
     z-index: 10;
     pointer-events: none;
+
 }
 
 .tooltip-date {
@@ -149,7 +201,8 @@ svg {
 }
 
 .tooltip-cloud {
-    color: #8395a7;
+    /*color: #8395a7;*/
+    color: #c8d6e5;
 }
 
 .tooltip-humidity {
@@ -172,10 +225,30 @@ svg {
 }
 
 .tooltip-snow {
-    color: #8791a3;
+    /*color: #8791a3;*/
+    color: #b2bec3;
 }
 
 .tooltip-precipitation-type {
     margin-bottom: 8px;
     margin-top: 8px;
+}
+
+button {
+  transition-duration: 0.4s;
+  background-color: cornflowerblue;
+  color: #f8f9fa;
+  border: 2px solid cornflowerblue;
+  font-family: 'Inter var', sans-serif;
+}
+
+button:hover {
+  background-color: skyblue; /* Green */
+  color: white;
+}
+
+input {
+    font-family: 'Inter var', sans-serif;
+    color: #34495e;
+    border: 1px;
 }
